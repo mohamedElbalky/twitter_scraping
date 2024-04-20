@@ -51,7 +51,7 @@ def scrape_twitter_accounts(usernames: list[str], tag: str) -> int:
 
     # scraper.session_reset()   # TEST
     # print(f"filterd tweets: {filtered_tweets}")  # TEST
-    print(f"\nNumber of tweets taged by {tag}: {filtered_tweets_count}")
+    # print(f"\nNumber of tweets taged by {tag}: {filtered_tweets_count}")
     return filtered_tweets_count
 
 def get_time_interval(minute: str) -> int:
@@ -61,7 +61,7 @@ def get_time_interval(minute: str) -> int:
         return interval
     except ValueError:
         print("Time interval must be an integer\n")
-        minute_ = input("\nEnter the time interval by minutes:" )
+        minute_ = input("\nEnter the time interval by minutes: " )
         get_time_interval(minute_)
 
 def main():
@@ -122,7 +122,7 @@ def main():
         delta_time = end_time - start_time
 
         print(
-            f'\n"#{tag}" was mentioned "{total_mentions}" times in the last "{delta_time / 60}" minutes.\n'
+            f'\n"{tag}" was mentioned "{total_mentions}" times in the last "{round(delta_time / 60, 1)}" minutes.\n'
         )
 
         # new session
@@ -134,7 +134,7 @@ def main():
             break
         
         # time interval 
-        time_input = input("\nEnter 'q' to quit or enter the time interval by minutes:" )
+        time_input = input("\nEnter 'q' to quit or enter the time interval by minutes: " )
         if time_input == "q":
             print("Bye! :)")
             break
