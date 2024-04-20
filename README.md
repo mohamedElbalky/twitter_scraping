@@ -6,7 +6,7 @@
 1. Clone the repo
 2. create a virtual environment: `python -m venv env/`
 3. activate a virtual environment: `source env/bin/activate`
-4. install python libraries: `pip install ntscraper tqdm`
+4. install python libraries: `pip install -r requirments.txt`
 5. run main.py file.
 
 ##### Note: this script runs on Linux system
