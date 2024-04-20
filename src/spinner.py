@@ -15,8 +15,6 @@ def spinner(seconds: int):
         elapsed_time = time.time() - start_time
         index = (index + 1) % len(spinner_symbols)
     sys.stdout.flush()
-    # print("\nhello world")
-
 def main():
     spinner(10)
 

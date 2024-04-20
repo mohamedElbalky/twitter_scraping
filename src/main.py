@@ -103,7 +103,7 @@ def main():
         for slice in range(4, len(users_list) + 3, 4):
             scraping_users_list = users_list[slice - 4 : slice]
             
-            print(f"Start Scraping ({', '.join(scraping_users_list)}) users...\n")
+            print(f"\nStart Scraping ({', '.join(scraping_users_list)}) users...\n")
 
             mentions_count = scrape_twitter_accounts(scraping_users_list, tag)
             total_mentions += mentions_count
